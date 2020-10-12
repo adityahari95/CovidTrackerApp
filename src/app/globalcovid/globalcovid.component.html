@@ -1,0 +1,40 @@
+<h1>Country Wise Details</h1>
+<p>Below are the country wise details</p>
+
+
+<h1 style="font-size: large;">Select a Country</h1>
+
+<select (change)="getCountry($event.target.value)" style=" width: 800px;font-size:large">
+    <option style="color:black"  *ngFor="let country of countries" value={{country.Slug}}>
+        {{ country.Country }}
+    </option>
+</select>
+<div></div>
+<button (click)="getCoronaData()">Get Coronavirus Data</button>
+
+<div fxLayout="row" fxLayoutGap="12px" style="padding: 30px">
+    <mat-card id="card1">
+        <mat-card-title>Confirmed Cases</mat-card-title>
+        <hr />
+        <mat-card-content style="font-size: large;text-align: center;padding: 20px;">{{confirmed}}</mat-card-content>
+
+    </mat-card>
+    <mat-card id="card2">
+        <mat-card-title>Active Cases</mat-card-title>
+        <hr />
+        <mat-card-content style="font-size: large;text-align: center;padding: 20px;">{{active}}</mat-card-content>
+
+    </mat-card>
+    <mat-card id="card3">
+        <mat-card-title>Recovered</mat-card-title>
+        <hr />
+        <mat-card-content style="font-size: large;text-align: center;padding: 20px;">{{recovered}}</mat-card-content>
+
+    </mat-card>
+    <mat-card id="card4">
+        <mat-card-title>Deaths</mat-card-title>
+        <hr />
+        <mat-card-content style="font-size: large;text-align: center;padding: 20px;">{{deaths}}</mat-card-content>
+
+    </mat-card>
+</div>

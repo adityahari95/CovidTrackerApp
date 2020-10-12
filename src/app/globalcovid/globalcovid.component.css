@@ -1,0 +1,35 @@
+#card1 {
+    border: 2px solid blue;
+    width: 200px;
+    height: 120px;
+}
+
+#card2 {
+    border: 2px solid yellow;
+    width: 200px;
+    height: 120px;
+}
+
+#card3 {
+    border: 2px solid green;
+    width: 200px;
+    height: 120px;
+}
+
+#card4 {
+    border: 2px solid red;
+    width: 200px;
+    height: 120px;
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

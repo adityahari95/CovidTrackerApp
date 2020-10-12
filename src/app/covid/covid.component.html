@@ -1,0 +1,44 @@
+<html>
+<marquee>Covid Live Status as on {{ curday("/") }}</marquee>
+
+<h1>Covid Case Tracker</h1>
+
+<hr />
+<a href="xx" style="padding: 400px; color: blue; font-size: medium">Global</a>
+
+<a href="countrywise" style="color: red; font-size: medium">Country Wise</a>
+
+<h1>Be Safe</h1>
+
+<p style="color: black; font-size: medium; padding: 10px">
+    This page gives details of Corona Cases Globally. Visit Country Wise page for country specific information.
+</p>
+
+<div fxLayout="row" fxLayoutGap="200px" style="padding: 20px; width: auto">
+    <mat-card id="card1">
+        <mat-card-title>Total Confirmed</mat-card-title>
+        <hr />
+        <mat-card-content style="font-size: large; text-align: center; padding: 20px">{{ totalconfirmed }}</mat-card-content>
+    </mat-card>
+    <mat-card id="card2">
+        <mat-card-title>Total Deaths</mat-card-title>
+        <hr />
+        <mat-card-content style="font-size: large; text-align: center; padding: 20px">{{ totaldeaths }}</mat-card-content>
+    </mat-card>
+    <mat-card id="card3">
+        <mat-card-title>Total Recovered</mat-card-title>
+        <hr />
+        <mat-card-content style="font-size: large; text-align: center; padding: 20px">{{ totalrecovered }}</mat-card-content>
+    </mat-card>
+</div>
+<hr />
+<h1>Top Counts - Select Category:</h1>
+<hr />
+<mat-radio-group id="radio">
+    <mat-radio-button id="confirm">Confirmed Cases</mat-radio-button>
+    <mat-radio-button id="active">Active Cases</mat-radio-button>
+    <mat-radio-button id="recover">Recovered Cases</mat-radio-button>
+    <mat-radio-button id="death">Deaths Cases</mat-radio-button>
+</mat-radio-group>
+
+</html>
