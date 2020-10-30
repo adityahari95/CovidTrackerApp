@@ -19,23 +19,33 @@ export class GlobalcovidComponent implements OnInit {
   ngOnInit(): void {
     this.service.fetchCountries().subscribe((data) => {
       this.countries = data as string[];
-      console.log(data);
+      // console.log(data);
     });
   }
 
-  getCoronaData() {
-    this.service.getCoronaRealTimeData(this.country).subscribe((data) => {
-      console.log(data);
-      var index = data.length - 1;
-      this.confirmed = data[index].Confirmed;
-      this.deaths = data[index].Deaths;
-      this.active = data[index].Active;
-      this.recovered = data[index].Recovered;
-    });
-  }
+  // getCoronaData() {
+  //   this.service.getCoronaRealTimeData(this.country).subscribe((data) => {
+  //     console.log(data);
+  //     var index = data.length - 1;
+  //     this.confirmed = data[index].Confirmed;
+  //     this.deaths = data[index].Deaths;
+  //     this.active = data[index].Active;
+  //     this.recovered = data[index].Recovered;
+  //   });
+  // }
+
+  //Displaying the countries Active/Death/Recovery/Confirmed Cases
 
   getCountry(country) {
     this.country = country;
     console.log(country);
+    this.service.getCoronaRealTimeData(country).subscribe((data) => {
+          // console.log(data);
+          var index = data.length - 1;
+          this.confirmed = data[index].Confirmed;
+          this.deaths = data[index].Deaths;
+          this.active = data[index].Active;
+          this.recovered = data[index].Recovered;
+        });
   }
 }

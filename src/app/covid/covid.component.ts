@@ -12,8 +12,8 @@ export class CovidComponent implements OnInit {
   totalrecovered = 0;
 
   constructor(private service: CovidService) {}
-
-  curday = function (sp) {
+  
+   curday = function (sp) {
     let today = new Date();
     let dd = today.getDate();
     let mm = today.getMonth() + 1; //As January is 0.
@@ -29,5 +29,7 @@ export class CovidComponent implements OnInit {
       this.totaldeaths = result.TotalDeaths;
       this.totalrecovered = result.TotalRecovered;
     });
+    
   }
+  
 }

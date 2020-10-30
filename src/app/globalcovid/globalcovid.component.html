@@ -4,13 +4,22 @@
 
 <h1 style="font-size: large;">Select a Country</h1>
 
-<select (change)="getCountry($event.target.value)" style=" width: 800px;font-size:large">
+<!-- <select id="country" #input(change)="getCountry($event.target.value)" style=" width: 800px;font-size:large">
+    <option style="color:black"  *ngFor="let country of countries" value={{country.Slug}}>
+        {{ country.Country }}
+    </option>
+</select> -->
+
+  <!-- Adding Countries in the dropdown  -->
+
+<select id="country" #input (change)="getCountry(input.value)" style=" width: 800px;font-size:large">
     <option style="color:black"  *ngFor="let country of countries" value={{country.Slug}}>
         {{ country.Country }}
     </option>
 </select>
 <div></div>
-<button (click)="getCoronaData()">Get Coronavirus Data</button>
+
+<!-- <button (click)="getCoronaData()">Get Coronavirus Data</button> -->
 
 <div fxLayout="row" fxLayoutGap="12px" style="padding: 30px">
     <mat-card id="card1">
